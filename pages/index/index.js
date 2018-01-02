@@ -1,18 +1,31 @@
-//index.js
-//获取应用实例
 const app = getApp()
-
+var toast = require('../../utils/toast/toast.js');
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    imgUrls: [
+      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 1000,
+    circular:true,
+    current:2,
+    index:'',
+    hiddenToast: true
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  getUserInfo: function(e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
     })
   },
   onLoad: function () {
@@ -41,14 +54,16 @@ Page({
           })
         }
       })
-    }
+    };
+  //toast.showToastDefault(this, '有文案，无遮罩层')//有文案，无遮罩层
+  //toast.showToastWithMask(this, '有文案，有遮罩层')//有文案，有遮罩层
+  //toast.showToast(this, '有文案，有遮罩层，2秒后关闭', 5000, true)//有文案，有遮罩层，延迟多少毫秒关闭
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  showindex: function(e) {
+    var index = e.currentTarget.dataset.index + 1 ;
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      index : index ,
     })
+    toast.showToastDefault(this, '你点击了第'+index+'张图片')//有文案，无遮罩层
   }
 })

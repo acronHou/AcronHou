@@ -1,12 +1,41 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
+  "window": {
+    "navigationBarBackgroundColor":"black",
+    "navigationBarTitleText":"AcronHou",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"black",
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "enablePullDownRefresh":false
+  },
+  "tabBar": {
+    "color":"#717478",
+    "selectedColor": "#000000",
+    "borderStyle":"#000000",
+    "backgroundColor":"#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "img/icon3.jpg",
+      "selectedIconPath": "img/icon1.jpg"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "浏览记录",
+      "iconPath": "img/icon3.jpg",
+      "selectedIconPath": "img/icon1.jpg"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "日志",
+      "iconPath": "img/icon3.jpg",
+      "selectedIconPath": "img/icon1.jpg"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }

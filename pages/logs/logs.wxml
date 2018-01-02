@@ -1,6 +1,7 @@
-<!--logs.wxml-->
 <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
+    <ul>
+    	<li><span>●ω●</span>您于{{log}}登录了此小程序</li>
+    </ul>
   </block>
 </view>
