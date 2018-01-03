@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/temp/temp",
+    "template/template"
   ],
   "window": {
     "navigationBarBackgroundColor":"black",
@@ -22,13 +24,13 @@
       "iconPath": "img/icon3.jpg",
       "selectedIconPath": "img/icon1.jpg"
     }, {
-      "pagePath": "pages/logs/logs",
-      "text": "浏览记录",
+      "pagePath": "pages/temp/temp",
+      "text": "组件实例",
       "iconPath": "img/icon3.jpg",
       "selectedIconPath": "img/icon1.jpg"
     },{
       "pagePath": "pages/logs/logs",
-      "text": "日志",
+      "text": "浏览记录",
       "iconPath": "img/icon3.jpg",
       "selectedIconPath": "img/icon1.jpg"
     }]

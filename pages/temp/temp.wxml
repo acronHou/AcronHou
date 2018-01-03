@@ -1,0 +1,6 @@
+<import src="../../template/template.wxml"/>  
+
+<view class="wrapper1">
+	<p>这是一个列表组件</p>
+     <template is="{{eg.data.length> 0 ? 'data' : 'noData'}}" data="{{...data}}"></template>   
+</view>

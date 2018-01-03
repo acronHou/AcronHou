@@ -1,7 +1,6 @@
 <view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
     <ul>
-    	<li><span>●ω●</span>您于{{log}}登录了此小程序</li>
+    	<li wx:for="{{logs}}" wx:for-item="log" data-index="{{index}}" bindtap="remove">{{index+1}}-您于{{log}}登录了此小程序 <span class="removebtn"><image class="removeimg" src="../../img/remove.jpeg"></image></span></li>
     </ul>
-  </block>
 </view>
+<include src="../../utils/dialog/dialog.wxml" />

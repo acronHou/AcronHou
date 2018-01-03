@@ -1,0 +1,4 @@
+.wrapper1{
+	width: 746rpx;
+	border: 1rpx solid red;
+}
